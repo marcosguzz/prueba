@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Mapa - añadir localizaciones</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2b2d6q9y7g+gWq0+3kUe3c0k4pXq9a4u2x0iR3k=" crossorigin=""/>
+
+  <!-- Leaflet.draw CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h1>Mi Mapa</h1>
+      <div class="controls">
+        <button id="btn-export">Exportar GeoJSON</button>
+        <input id="file-import" type="file" accept=".json,application/geo+json" />
+        <button id="btn-clear">Borrar todo</button>
+      </div>
+
+      <section id="list-section">
+        <h2>Localizaciones</h2>
+        <ul id="location-list"></ul>
+      </section>
+
+      <footer>
+        <small>Haz clic en el mapa o usa la herramienta de marcador para añadir una ubicación. Guardado automático en tu navegador.</small>
+      </footer>
+    </aside>
+
+    <main id="map-container">
+      <div id="map"></div>
+    </main>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1j6kV+g3r3gqC6kO6rY7Q2+o5gq1b5b9k3wQh6rM=" crossorigin=""></script>
+
+  <!-- Leaflet.draw JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
